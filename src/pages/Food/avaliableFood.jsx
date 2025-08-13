@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
 import FoodCard from '../../components/FoodCard';
 import Loading from '../../components/Loading';
@@ -11,18 +11,14 @@ const AvailableFoods = () => {
   const [isThreeColumn, setIsThreeColumn] = useState(true);
 
   // const {user}=use(AuthContext)
-  const {accessToken} = useContext(AuthContext)
+  // const {accessToken} = useContext(AuthContext)
   // console.log(user);
 // console.log(user?.accessToken);
 
   // console.log(user.accessToken);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/foods?sort=${sortOrder}`,{
-        headers:{
-                authorization: `Bearer ${accessToken}`,
-            }
-      })
+      .get(`http://localhost:5000/foods?sort=${sortOrder}`)
       .then(res => {
         setFoods(res.data);
         // console.log(res.data);
