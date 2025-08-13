@@ -6,7 +6,7 @@ import Loading from '../../components/Loading';
 import { Link } from 'react-router'; // ✅ fix this import
 
 const fetchFoods = async () => {
-  const res = await axios.get('https://food-hub-server-green.vercel.app/foods');
+  const res = await axios.get('http://localhost:5000/foods');
   return res.data;
 };
 

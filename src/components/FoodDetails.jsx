@@ -12,7 +12,7 @@ const FoodDetails = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    axios.get(`https://food-hub-server-green.vercel.app/foods/${id}`)
+    axios.get(`http://localhost:5000/foods/${id}`)
       .then(res => {
         setFoodData(res.data);
         setLoading(false);
@@ -27,7 +27,7 @@ const FoodDetails = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.put(`https://food-hub-server-green.vercel.app/foods/${id}`, {
+      const res = await axios.put(`http://localhost:5000/foods/${id}`, {
         status: "requested",
          requesterEmail: user.email
 

@@ -18,7 +18,7 @@ const AvailableFoods = () => {
   // console.log(user.accessToken);
   useEffect(() => {
     axios
-      .get(`https://food-hub-server-green.vercel.app/foods?sort=${sortOrder}`,{
+      .get(`http://localhost:5000/foods?sort=${sortOrder}`,{
         headers:{
                 authorization: `Bearer ${accessToken}`,
             }
@@ -38,7 +38,7 @@ const AvailableFoods = () => {
 
   return (
     
-    <div className="p-4 container mx-auto">
+    <div className="p-4 container mx-auto mt-22">
   {/* Sort Dropdown + Layout Toggle */}
   <div className="mb-6 mt-4 flex justify-between items-center">
     <button

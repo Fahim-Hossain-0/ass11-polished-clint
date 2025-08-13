@@ -15,7 +15,7 @@ const ManageFood = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`https://food-hub-server-green.vercel.app/foods?email=${user.email}`,{
+        .get(`http://localhost:5000/foods?email=${user.email}`,{
             headers:{
                 authorization: `Bearer ${user?.accessToken}`,
             },
@@ -34,7 +34,7 @@ const ManageFood = () => {
     });
 
     if (confirm.isConfirmed) {
-      await axios.delete(`https://food-hub-server-green.vercel.app/foods/${id}`);
+      await axios.delete(`http://localhost:5000/foods/${id}`);
       setFoods((prev) => prev.filter((food) => food._id !== id));
       Swal.fire("Deleted!", "Your food has been deleted.", "success");
     }
@@ -53,7 +53,7 @@ const ManageFood = () => {
       status: form.status.value,
     };
 
-    await axios.put(`https://food-hub-server-green.vercel.app/foods/${editingFood._id}`, updatedFood);
+    await axios.put(`http://localhost:5000/foods/${editingFood._id}`, updatedFood);
     Swal.fire("Updated!", "Food info updated successfully.", "success");
 
     setFoods((prev) =>
@@ -65,7 +65,7 @@ const ManageFood = () => {
   };
 
   return (
-    <div className="overflow-x-auto container mx-auto h-screen">
+    <div className="overflow-x-auto container mx-auto h-screen mt-28">
       <h2 className="text-2xl font-bold mb-4">Manage Your Foods</h2>
       <table className="table w-full bg-[#EFEFEF]">
         <thead>
