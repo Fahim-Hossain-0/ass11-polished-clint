@@ -1,0 +1,65 @@
+food-sharing-app/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   └── images/              # Banner, icons, etc.
+│
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── FoodCard.jsx
+│   │   ├── FoodDetailsModal.jsx
+│   │   ├── LayoutToggle.jsx     # Toggle 3/2 column layout
+│   │   └── Loading.jsx
+│
+│   ├── context/
+│   │   └── AuthContext.jsx      # Firebase Auth context
+│
+│   ├── hooks/
+│   │   ├── useAxiosPublic.js
+│   │   └── useAxiosSecure.js
+│
+│   ├── layout/
+│   │   └── MainLayout.jsx       # Shared layout with Navbar/Footer
+│
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Banner.jsx
+│   │   │   ├── FeaturedFoods.jsx
+│   │   │   └── ExtraSection1.jsx
+│   │   │   └── ExtraSection2.jsx
+│   │   │
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Register.jsx
+│   │   │
+│   │   ├── Foods/
+│   │   │   ├── AvailableFoods.jsx
+│   │   │   ├── AddFood.jsx
+│   │   │   ├── ManageMyFoods.jsx
+│   │   │   ├── UpdateFood.jsx
+│   │   │   ├── MyFoodRequests.jsx
+│   │   │   └── FoodDetails.jsx
+│   │   │
+│   │   └── ErrorPage.jsx
+│
+│   ├── router/
+│   │   └── routes.jsx           # React Router setup
+│
+│   ├── utils/
+│   │   ├── auth.js              # Firebase config
+│   │   └── jwt.js               # Save/verify JWT token
+│
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
