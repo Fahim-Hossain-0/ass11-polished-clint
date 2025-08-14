@@ -5,7 +5,7 @@ import axios from "axios";
 
 const ManageFood = () => {
   const { user,accessToken } = useContext(AuthContext);
- console.log(accessToken);
+//  console.log(accessToken);
 // console.log(user?.accessToken);
 
   const [foods, setFoods] = useState([]);
@@ -15,11 +15,7 @@ const ManageFood = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/foods?email=${user.email}`,{
-            headers:{
-                authorization: `Bearer ${user?.accessToken}`,
-            },
-        })
+        .get(`http://localhost:5000/foods?email=${user.email}`)
         .then((res) => setFoods(res.data));
     }
   }, [user]);
