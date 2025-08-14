@@ -39,7 +39,7 @@ const AddFood = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/foods', foodItem); // your backend endpoint
+      const res = await axios.post('https://food-hub-server-green.vercel.app/foods', foodItem); // your backend endpoint
       if (res.data.insertedId) {
         Swal.fire('Success!', 'Food item added successfully.', 'success');
         setFormData({

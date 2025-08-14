@@ -4,7 +4,7 @@ import '../../index.css'
 const Banner = () => {
   return (
     <div
-      className="hero min-h-screen font"
+      className="hero min-h-screen font rounded-2xl"
       style={{
         backgroundImage: `url(${bannerImg})`,
         backgroundSize: 'cover',

@@ -18,7 +18,7 @@ const AvailableFoods = () => {
   // console.log(user.accessToken);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/foods?sort=${sortOrder}`)
+      .get(`https://food-hub-server-green.vercel.app/foods?sort=${sortOrder}`)
       .then(res => {
         setFoods(res.data);
         // console.log(res.data);

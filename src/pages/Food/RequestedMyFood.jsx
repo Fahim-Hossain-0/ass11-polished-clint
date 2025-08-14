@@ -14,7 +14,7 @@ const RequestedMyFood = () => {
 
   useEffect(() => {
     if (user?.email) {
-      axios.get(`http://localhost:5000/requested-foods?email=${user.email}`, )
+      axios.get(`https://food-hub-server-green.vercel.app/requested-foods?email=${user.email}`, )
         .then((res) => {
           setMyRequestedFoods(res.data);
         //   console.log(res.data);
